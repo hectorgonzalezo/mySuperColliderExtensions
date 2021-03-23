@@ -1,7 +1,7 @@
 
 //loads multiple buffers into an array by specifying the folder path
 
-BuffersFolder : Buffer {
+BuffersFolder {
 
     *read {
 		| path, startFrame= 0, numFrames= -1, action|

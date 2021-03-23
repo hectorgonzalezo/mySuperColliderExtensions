@@ -1,0 +1,48 @@
+class:: BuffersFolder
+summary:: Stores a folder full of soundfiles into and array of individual buffers
+related:: Classes/Buffer
+categories:: UGens>Buffer
+
+
+Description::
+
+
+Takes the path to a folder as input and loads every soundfile inside it into an array of buffers.
+
+
+
+classmethods::
+
+method:: read
+Allocate a buffer and immediately read a soundfile into it. Do this for every soundfile in folder specified.
+
+argument:: path
+A String representing the path of the soundfile to be read.
+argument:: startFrame
+The first frame of the soundfile to read. The default is 0, which is the beginning of the file.
+argument:: numFrames
+The number of frames to read. The default is -1, which will read the whole file.
+
+argument:: action
+A Function to be evaluated once the file has been read and this Buffer's instance variables have been updated. The function will be passed this Buffer as an argument.
+
+
+
+method:: readChannel
+As link::#*read:: above, but takes an link::Classes/Array:: of channel indices to read in, allowing one to read only the selected channels.
+
+argument:: path
+A String representing the path of the soundfile to be read.
+argument:: startFrame
+The first frame of the soundfile to read. The default is 0, which is the beginning of the file.
+argument:: numFrames
+The number of frames to read. The default is -1, which will read the whole file.
+argument:: channels
+An Array of channels to be read from the soundfile. Indices start from zero. These will be read in the order provided.
+argument:: action
+A Function to be evaluated once the file has been read and this Buffer's instance variables have been updated. The function will be passed this Buffer as an argument.
+
+
+Examples::
+
+None
